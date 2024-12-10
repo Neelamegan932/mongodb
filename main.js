@@ -4,6 +4,7 @@ const port = 8000;
 app.get("/", (req, res) => {
   res.json({ message: "Testing express" });
 });
+
 //CRUD FUNCTIONALITY METHODS
 //creating
 app.post("/movies", () => {});
