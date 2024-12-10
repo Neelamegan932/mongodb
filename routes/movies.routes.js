@@ -1,26 +1,24 @@
 import express from "express";
+import {
+  createMovie,
+  deleteMovie,
+  readMovie,
+  updateMovie,
+} from "../controllers/movies.controllers";
 const router = express.Router();
 
 //CRUD FUNCTIONALITY METHODS
 
 //creating
-router.post("/", (req, res) => {
-  res.send("Create movie lists");
-});
+router.post("/", createMovie);
 
 //reading
-router.get("/", (req, res) => {
-  res.send("Get movie lists");
-});
+router.get("/", readMovie);
 
 //updating
-router.put("/:id", (req, res) => {
-  res.send("Update a movie");
-});
+router.put("/:id", updateMovie);
 
 //deleting
-router.delete("/:id", (req, res) => {
-  res.send("Delete a movie");
-});
+router.delete("/:id", deleteMovie);
 
 export default router;
