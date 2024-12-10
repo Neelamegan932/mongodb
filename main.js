@@ -1,23 +1,11 @@
 import express from "express";
+import movieRoutes from "./routes/movies.routes.js";
 const app = express();
 const port = 8000;
 app.get("/", (req, res) => {
   res.json({ message: "Testing express" });
 });
-
-//CRUD FUNCTIONALITY METHODS
-//creating
-app.post("/movies", () => {});
-
-//reading
-app.get("/movies", () => {});
-
-//updating
-app.put("/movies/:id", () => {});
-
-//deleting
-app.delete("/movies/:id", () => {});
-
+app.use("/movies", movieRoutes);
 app.listen(port, () => {
   console.log(`listening to http://localhost:${port}`);
 });
