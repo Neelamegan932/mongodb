@@ -17,9 +17,21 @@
 `SQL - MySQL, PostGres, MariaDB`
 `NoSQL- MongoDB, `
 
-`mongodb+srv://neelamegan:LHgeYUoD2e1Qn0LY@cluster0.2siz9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+### MongoDB connection method
 
-mongoose.connect('mongodb+srv://<username>:<password>@cluster0.2siz9.mongodb.net/<dbname>?retryWrites=true&w=majority', {
-connectTimeoutMS: 30000, // 30 seconds
-socketTimeoutMS: 30000,
-});
+`Open mongodb atlas in browser`
+`choose try free tier, then select nearby region as Mumbai`
+`In atlas page, create new project, dataset and cluster`
+`Connection page will open, then copy the connection string`
+`Use the connection string in VS code to connect with the MongoDB Atlas database`
+
+## Hiding sensitive information
+
+`create .env file and save the the connection string in a variable`
+`hide this .env file using the .env in .gitignore file`
+`use process.env.<your variable name> in connection string field instead of using original connection string`
+`install the package dotenv using npm install dotenv command`
+`import the dotenv package using import dotenv from dotenv`
+`configure the dotenv package using dotenv.config()`
+`create copy of .env file using ctrl+C and ctrl+V in files column`
+`remove the connection string and keep only the variable name in .env copy file`
