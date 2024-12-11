@@ -1,5 +1,6 @@
 export const createMovie = (req, res) => {
-  res.send("Create a movie");
+  console.log(req.body);
+  return res.json(req.body);
 };
 
 export const readMovie = (req, res) => {

@@ -2,6 +2,8 @@ import express from "express";
 import movieRoutes from "./routes/movies.routes.js";
 import connectDB from "./lib/db.js";
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded());
 const port = 8000;
 connectDB();
 app.get("/", (req, res) => {

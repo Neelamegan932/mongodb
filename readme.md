@@ -35,3 +35,9 @@
 `configure the dotenv package using dotenv.config()`
 `create copy of .env file using ctrl+C and ctrl+V in files column`
 `remove the connection string and keep only the variable name in .env copy file`
+
+## Sending data request using postman
+
+`To receive data sent through postman in proper form, use middleware called use`
+`Use app.use(express.json()) in main file`
+`It makes the server understand any type of data`
