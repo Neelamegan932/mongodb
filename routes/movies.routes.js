@@ -4,7 +4,7 @@ import {
   deleteMovie,
   readMovie,
   updateMovie,
-} from "../controllers/movies.controllers";
+} from "../controllers/movies.controllers.js";
 const router = express.Router();
 
 //CRUD FUNCTIONALITY METHODS
