@@ -4,6 +4,7 @@ import {
   deleteMovie,
   readMovie,
   updateMovie,
+  movieDetail,
 } from "../controllers/movies.controllers.js";
 const router = express.Router();
 
@@ -14,6 +15,9 @@ router.post("/", createMovie);
 
 //reading
 router.get("/", readMovie);
+
+//single movie detail
+router.get("/:id", movieDetail);
 
 //updating
 router.put("/:id", updateMovie);
